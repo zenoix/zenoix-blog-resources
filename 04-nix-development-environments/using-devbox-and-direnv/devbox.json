@@ -1,15 +1,18 @@
 {
-    "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.6-c0331c7/.schema/devbox.schema.json",
-    "packages": [],
-    "shell": {
-      "init_hook": [
-        "echo 'Welcome to devbox!' > /dev/null"
-      ],
-      "scripts": {
-        "test": [
-          "echo \"Error: no test specified\" && exit 1"
-        ]
-      }
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.6-c0331c7/.schema/devbox.schema.json",
+  "packages": [
+    "bat@latest",
+    "python@3.12",
+    "python312Packages.pandas@latest",
+    "python312Packages.numpy@latest"
+  ],
+  "shell": {
+    "init_hook": ["bat --decorations never README.md"],
+    "scripts": {
+      "test": ["echo \"Error: no test specified\" && exit 1"]
     }
+  },
+  "env": {
+    "ENV": "DEV"
   }
-  
+}
